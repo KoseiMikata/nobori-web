@@ -86,7 +86,7 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: #fff;
+    color: var(--color-text);
   }
 
   .section-sub {
@@ -115,9 +115,9 @@
   }
 
   .plan-card.recommended {
-    border-color: rgba(78, 205, 196, 0.5);
-    box-shadow: 0 8px 32px rgba(78, 205, 196, 0.15);
-    background: rgba(78, 205, 196, 0.05);
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 32px rgba(91, 140, 110, 0.15);
+    background: rgba(91, 140, 110, 0.03);
   }
 
   .recommend-badge {
@@ -144,7 +144,7 @@
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
-    color: #fff;
+    color: var(--color-primary-dark);
   }
 
   .plan-price {
@@ -191,12 +191,12 @@
     content: '✓';
     position: absolute;
     left: 0;
-    color: #4ecdc4;
+    color: var(--color-primary);
     font-weight: 700;
   }
 
   .plan-features li.not-included {
-    color: rgba(255, 255, 255, 0.2);
+    color: #ccc;
   }
 
   .plan-features li.not-included::before {
@@ -209,16 +209,17 @@
     display: block;
     text-align: center;
     padding: 0.8rem;
-    border: 1px solid rgba(78, 205, 196, 0.4);
+    border: 1px solid var(--color-primary);
     border-radius: 8px;
     font-weight: 600;
-    color: #4ecdc4;
+    color: var(--color-primary);
     transition: all 0.3s;
     background: transparent;
   }
 
   .plan-btn:hover {
-    background: rgba(78, 205, 196, 0.1);
+    background: var(--color-primary);
+    color: #fff;
     border-color: rgba(78, 205, 196, 0.6);
   }
 
@@ -226,11 +227,11 @@
     background: var(--gradient-primary);
     color: #fff;
     border: none;
-    box-shadow: 0 4px 20px rgba(78, 205, 196, 0.3);
+    box-shadow: 0 4px 20px rgba(91, 140, 110, 0.3);
   }
 
   .plan-btn.primary:hover {
-    box-shadow: 0 8px 30px rgba(78, 205, 196, 0.4);
+    box-shadow: 0 8px 30px rgba(91, 140, 110, 0.4);
     transform: translateY(-1px);
   }
 
