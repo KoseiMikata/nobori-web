@@ -3,11 +3,11 @@
 
 <section id="works" class="works">
   <div class="container">
-    <h2 class="section-title fade-in">制作実績</h2>
-    <p class="section-sub fade-in">これまでの制作事例をご紹介します</p>
+    <h2 class="section-title">制作実績</h2>
+    <p class="section-sub">これまでの制作事例をご紹介します</p>
 
     <div class="works-grid">
-      <div class="work-card glass fade-in">
+      <div class="work-card">
         <div class="work-image placeholder cafe">
           <svg class="placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20h24v2c0 6-4 12-12 12S8 28 8 22v-2z"/><path d="M32 22h4a4 4 0 0 0 0-8h-4"/><line x1="20" y1="34" x2="20" y2="40"/><line x1="13" y1="40" x2="27" y2="40"/><path d="M12 8c0 4 4 6 4 10"/><path d="M20 6c0 4 4 6 4 10"/><path d="M28 8c0 4 4 6 4 10"/></svg>
           <span>カフェひだまり</span>
@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <div class="work-card glass fade-in">
+      <div class="work-card">
         <div class="work-image placeholder salon">
           <svg class="placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="16" r="8"/><path d="M10 42c0-8 6-14 14-14s14 6 14 14"/><path d="M18 12c-2-6 2-10 6-10"/><path d="M30 12c2-6-2-10-6-10"/></svg>
           <span>hair salon Lino</span>
@@ -33,7 +33,7 @@
         </div>
       </div>
 
-      <div class="work-card glass fade-in">
+      <div class="work-card">
         <div class="work-image placeholder seitai">
           <svg class="placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4v16"/><path d="M16 12l8 8 8-8"/><circle cx="24" cy="28" r="4"/><path d="M14 38c0-6 4-10 10-10s10 4 10 10"/><path d="M8 28c2-2 4-2 6 0"/><path d="M34 28c2-2 4-2 6 0"/></svg>
           <span>すこやか整体院</span>
@@ -54,7 +54,7 @@
 <style>
   .works {
     padding: var(--section-padding);
-    background: rgba(255, 255, 255, 0.02);
+    background: #f3f0eb;
   }
 
   .container {
@@ -67,7 +67,6 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--color-text);
   }
 
   .section-sub {
@@ -83,15 +82,16 @@
   }
 
   .work-card {
+    background: var(--color-bg-card);
     border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s, box-shadow 0.2s;
   }
 
   .work-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-    border-color: var(--color-primary-light);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   }
 
   .work-image.placeholder {
@@ -146,7 +146,6 @@
   .work-info h3 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
-    color: var(--color-text);
   }
 
   .work-info p {
