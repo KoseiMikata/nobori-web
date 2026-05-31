@@ -139,7 +139,7 @@
   .submit-btn {
     width: 100%;
     padding: 0.9rem;
-    background: var(--gradient-primary);
+    background: var(--color-primary);
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -147,13 +147,12 @@
     font-weight: 600;
     font-family: var(--font-ja);
     cursor: pointer;
-    transition: opacity 0.2s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 20px rgba(78, 205, 196, 0.3);
+    transition: background 0.2s, transform 0.2s;
   }
 
   .submit-btn:hover {
+    background: var(--color-primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(78, 205, 196, 0.4);
   }
 
   @media (max-width: 768px) {
