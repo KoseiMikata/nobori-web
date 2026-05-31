@@ -3,11 +3,11 @@
 
 <section id="plan" class="plan">
   <div class="container">
-    <h2 class="section-title">料金プラン</h2>
-    <p class="section-sub">お店の規模に合わせて、3つのプランをご用意しています</p>
+    <h2 class="section-title fade-in">料金プラン</h2>
+    <p class="section-sub fade-in">お店の規模に合わせて、3つのプランをご用意しています</p>
 
     <div class="plan-grid">
-      <div class="plan-card">
+      <div class="plan-card glass fade-in">
         <div class="plan-header">
           <h3>ライト</h3>
           <div class="plan-price"><span class="price-num">5</span>万円<span class="tax">（税込）</span></div>
@@ -26,7 +26,7 @@
         <a href="#contact" class="plan-btn">相談する</a>
       </div>
 
-      <div class="plan-card recommended">
+      <div class="plan-card recommended glass fade-in">
         <div class="recommend-badge">おすすめ</div>
         <div class="plan-header">
           <h3>スタンダード</h3>
@@ -46,7 +46,7 @@
         <a href="#contact" class="plan-btn primary">相談する</a>
       </div>
 
-      <div class="plan-card">
+      <div class="plan-card glass fade-in">
         <div class="plan-header">
           <h3>プレミアム</h3>
           <div class="plan-price"><span class="price-num">15</span>万円<span class="tax">（税込）</span></div>
@@ -66,14 +66,14 @@
       </div>
     </div>
 
-    <p class="plan-note">※ 上記は目安です。ご要望に応じて柔軟に対応いたしますので、まずはお気軽にご相談ください。<br/>※ ドメイン費用（年間約1,500円）のみ別途お客様負担となります。月額費用はかかりません。</p>
+    <p class="plan-note fade-in">※ 上記は目安です。ご要望に応じて柔軟に対応いたしますので、まずはお気軽にご相談ください。<br/>※ ドメイン費用（年間約1,500円）のみ別途お客様負担となります。月額費用はかかりません。</p>
   </div>
 </section>
 
 <style>
   .plan {
     padding: var(--section-padding);
-    background: #f3f0eb;
+    background: rgba(255, 255, 255, 0.02);
   }
 
   .container {
@@ -86,6 +86,7 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    color: #fff;
   }
 
   .section-sub {
@@ -102,21 +103,21 @@
   }
 
   .plan-card {
-    background: var(--color-bg-card);
-    border: 2px solid var(--color-border);
     border-radius: 16px;
     padding: 2rem;
     position: relative;
-    transition: transform 0.2s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   }
 
   .plan-card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(78, 205, 196, 0.1);
   }
 
   .plan-card.recommended {
-    border-color: var(--color-primary);
-    box-shadow: 0 8px 32px rgba(91, 140, 110, 0.15);
+    border-color: rgba(78, 205, 196, 0.5);
+    box-shadow: 0 8px 32px rgba(78, 205, 196, 0.15);
+    background: rgba(78, 205, 196, 0.05);
   }
 
   .recommend-badge {
@@ -124,7 +125,7 @@
     top: -14px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--color-primary);
+    background: var(--gradient-primary);
     color: #fff;
     font-size: 0.8rem;
     font-weight: 600;
@@ -143,19 +144,23 @@
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
-    color: var(--color-primary-dark);
+    color: #fff;
   }
 
   .plan-price {
     font-size: 1rem;
     font-weight: 500;
+    color: var(--color-text);
   }
 
   .price-num {
     font-family: var(--font-en);
     font-size: 3rem;
     font-weight: 700;
-    color: var(--color-primary);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .tax {
@@ -179,18 +184,19 @@
     font-size: 0.9rem;
     padding-left: 1.8rem;
     position: relative;
+    color: var(--color-text);
   }
 
   .plan-features li.included::before {
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--color-primary);
+    color: #4ecdc4;
     font-weight: 700;
   }
 
   .plan-features li.not-included {
-    color: #ccc;
+    color: rgba(255, 255, 255, 0.2);
   }
 
   .plan-features li.not-included::before {
@@ -203,25 +209,29 @@
     display: block;
     text-align: center;
     padding: 0.8rem;
-    border: 2px solid var(--color-primary);
+    border: 1px solid rgba(78, 205, 196, 0.4);
     border-radius: 8px;
     font-weight: 600;
-    color: var(--color-primary);
-    transition: all 0.2s;
+    color: #4ecdc4;
+    transition: all 0.3s;
+    background: transparent;
   }
 
   .plan-btn:hover {
-    background: var(--color-primary);
-    color: #fff;
+    background: rgba(78, 205, 196, 0.1);
+    border-color: rgba(78, 205, 196, 0.6);
   }
 
   .plan-btn.primary {
-    background: var(--color-primary);
+    background: var(--gradient-primary);
     color: #fff;
+    border: none;
+    box-shadow: 0 4px 20px rgba(78, 205, 196, 0.3);
   }
 
   .plan-btn.primary:hover {
-    background: var(--color-primary-dark);
+    box-shadow: 0 8px 30px rgba(78, 205, 196, 0.4);
+    transform: translateY(-1px);
   }
 
   .plan-note {

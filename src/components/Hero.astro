@@ -2,7 +2,8 @@
 ---
 
 <section class="hero">
-  <div class="hero-content">
+  <div class="hero-glow"></div>
+  <div class="hero-content fade-in">
     <p class="hero-sub">ホームページ制作・Webサイト構築</p>
     <h1>ビジネスの<br /><span class="highlight">次のステージ</span>へ</h1>
     <p class="hero-desc">
@@ -15,12 +16,26 @@
       <a href="#plan" class="btn-secondary">料金プランを見る</a>
     </div>
   </div>
-  <div class="hero-visual">
+  <div class="hero-visual fade-in">
     <div class="mountain-icon">
       <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 120 L70 25 L100 60 L140 10 L200 120Z" fill="var(--color-primary)" opacity="0.15"/>
-        <path d="M20 120 L90 35 L120 65 L160 15 L200 120Z" fill="var(--color-primary)" opacity="0.25"/>
-        <path d="M140 15 L150 30 L160 20 L170 35 L140 15Z" fill="var(--color-accent)" opacity="0.6"/>
+        <defs>
+          <linearGradient id="mountain1" x1="0" y1="0" x2="200" y2="120" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#5b8c6e"/>
+            <stop offset="100%" stop-color="#4ecdc4"/>
+          </linearGradient>
+          <linearGradient id="mountain2" x1="20" y1="0" x2="200" y2="120" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4ecdc4"/>
+            <stop offset="100%" stop-color="#44a08d"/>
+          </linearGradient>
+          <linearGradient id="peak" x1="140" y1="10" x2="170" y2="35" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#e8a87c"/>
+            <stop offset="100%" stop-color="#f093fb"/>
+          </linearGradient>
+        </defs>
+        <path d="M0 120 L70 25 L100 60 L140 10 L200 120Z" fill="url(#mountain1)" opacity="0.3"/>
+        <path d="M20 120 L90 35 L120 65 L160 15 L200 120Z" fill="url(#mountain2)" opacity="0.4"/>
+        <path d="M140 15 L150 30 L160 20 L170 35 L140 15Z" fill="url(#peak)" opacity="0.8"/>
       </svg>
     </div>
   </div>
@@ -36,17 +51,37 @@
     max-width: var(--max-width);
     margin: 0 auto;
     gap: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(78, 205, 196, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
   }
 
   .hero-content {
     flex: 1;
+    position: relative;
+    z-index: 1;
   }
 
   .hero-sub {
-    font-size: 0.95rem;
-    color: var(--color-primary);
-    font-weight: 500;
+    font-size: 0.9rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
     margin-bottom: 1rem;
+    letter-spacing: 0.05em;
   }
 
   h1 {
@@ -54,23 +89,15 @@
     font-weight: 700;
     line-height: 1.4;
     margin-bottom: 1.5rem;
+    color: #fff;
   }
 
   .highlight {
-    color: var(--color-primary);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     position: relative;
-  }
-
-  .highlight::after {
-    content: '';
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-    right: 0;
-    height: 8px;
-    background: var(--color-accent);
-    opacity: 0.4;
-    z-index: -1;
   }
 
   .hero-desc {
@@ -87,33 +114,36 @@
   }
 
   .btn-primary {
-    background: var(--color-primary);
+    background: var(--gradient-primary);
     color: #fff;
     padding: 0.85rem 2rem;
     border-radius: 8px;
     font-weight: 600;
     font-size: 1rem;
-    transition: background 0.2s, transform 0.2s;
+    transition: opacity 0.2s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(78, 205, 196, 0.3);
   }
 
   .btn-primary:hover {
-    background: var(--color-primary-dark);
     transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(78, 205, 196, 0.4);
   }
 
   .btn-secondary {
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-text);
     padding: 0.85rem 2rem;
     border-radius: 8px;
     font-weight: 600;
     font-size: 1rem;
-    transition: all 0.2s;
+    transition: all 0.3s;
+    background: var(--color-bg-glass);
+    backdrop-filter: blur(8px);
   }
 
   .btn-secondary:hover {
-    background: var(--color-primary);
-    color: #fff;
+    border-color: rgba(78, 205, 196, 0.5);
+    background: rgba(78, 205, 196, 0.1);
     transform: translateY(-2px);
   }
 
@@ -122,11 +152,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 1;
   }
 
   .mountain-icon svg {
     width: 100%;
     max-width: 300px;
+    filter: drop-shadow(0 0 40px rgba(78, 205, 196, 0.2));
   }
 
   @media (max-width: 768px) {
