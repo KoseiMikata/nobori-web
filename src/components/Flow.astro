@@ -1,0 +1,147 @@
+---
+---
+
+<section id="flow" class="flow">
+  <div class="container">
+    <h2 class="section-title">制作の流れ</h2>
+    <p class="section-sub">お問い合わせから最短1週間で公開できます</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>お問い合わせ・ご相談</h3>
+          <p>まずはお気軽にご連絡ください。ご要望やお悩みをお聞きします。ご相談は無料です。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>ヒアリング・素材ご準備</h3>
+          <p>お店の情報、写真、伝えたいことを整理します。ヒアリングシートをお渡しするので、迷わず進められます。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>制作・プレビュー</h3>
+          <p>素材をいただいてから制作開始。完成イメージをお見せして、ご確認いただきます。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>修正・調整</h3>
+          <p>フィードバックをもとに修正。「ここをこうしたい」をお気軽にお伝えください。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h3>公開・納品</h3>
+          <p>ホームページを公開して納品完了。お客様のお店が、ネット上に登場します。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flow-note">
+      <p>素材ご提出後、最短<strong>1週間</strong>で公開できます</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .flow {
+    padding: var(--section-padding);
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-sub {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+  }
+
+  .steps {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+    position: relative;
+  }
+
+  .step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 44px;
+    bottom: 0;
+    width: 2px;
+    background: var(--color-border);
+  }
+
+  .step-number {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-en);
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    padding-top: 0.4rem;
+  }
+
+  .step-content p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.8;
+  }
+
+  .flow-note {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .flow-note p {
+    font-size: 0.95rem;
+  }
+</style>

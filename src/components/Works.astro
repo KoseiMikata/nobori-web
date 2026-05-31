@@ -1,0 +1,179 @@
+---
+---
+
+<section id="works" class="works">
+  <div class="container">
+    <h2 class="section-title">制作実績</h2>
+    <p class="section-sub">これまでの制作事例をご紹介します</p>
+
+    <div class="works-grid">
+      <div class="work-card">
+        <div class="work-image placeholder cafe">
+          <svg class="placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20h24v2c0 6-4 12-12 12S8 28 8 22v-2z"/><path d="M32 22h4a4 4 0 0 0 0-8h-4"/><line x1="20" y1="34" x2="20" y2="40"/><line x1="13" y1="40" x2="27" y2="40"/><path d="M12 8c0 4 4 6 4 10"/><path d="M20 6c0 4 4 6 4 10"/><path d="M28 8c0 4 4 6 4 10"/></svg>
+          <span>カフェひだまり</span>
+        </div>
+        <div class="work-info">
+          <span class="work-tag">スタンダード</span>
+          <h3>カフェひだまり 様</h3>
+          <p>住宅街の隠れ家カフェ。Instagramと連携し、週替わりメニューが自動で更新される仕組みに。「ホームページを見て来ました」というお客様が増えたとのこと。</p>
+          <div class="work-meta">5ページ構成 / 制作期間 5日</div>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-image placeholder salon">
+          <svg class="placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="16" r="8"/><path d="M10 42c0-8 6-14 14-14s14 6 14 14"/><path d="M18 12c-2-6 2-10 6-10"/><path d="M30 12c2-6-2-10-6-10"/></svg>
+          <span>hair salon Lino</span>
+        </div>
+        <div class="work-info">
+          <span class="work-tag">ライト</span>
+          <h3>hair salon Lino 様</h3>
+          <p>自宅サロンの開業に合わせてLP制作。メニュー・料金・アクセスを1ページにまとめ、予約導線をシンプルに設計。開業初月から新規予約を獲得。</p>
+          <div class="work-meta">LP 1ページ / 制作期間 3日</div>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="work-image placeholder seitai">
+          <svg class="placeholder-icon" viewBox="0 0 48 48" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4v16"/><path d="M16 12l8 8 8-8"/><circle cx="24" cy="28" r="4"/><path d="M14 38c0-6 4-10 10-10s10 4 10 10"/><path d="M8 28c2-2 4-2 6 0"/><path d="M34 28c2-2 4-2 6 0"/></svg>
+          <span>すこやか整体院</span>
+        </div>
+        <div class="work-info">
+          <span class="work-tag">スタンダード</span>
+          <h3>すこやか整体院 様</h3>
+          <p>チラシだけで集客していた整体院にホームページを導入。施術メニュー・院長紹介・患者様の声を掲載。Googleマップ経由のアクセスが大幅増。</p>
+          <div class="work-meta">4ページ構成 / 制作期間 6日</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="works-note">※ 掲載はお客様の許可を得た事例のみです</p>
+  </div>
+</section>
+
+<style>
+  .works {
+    padding: var(--section-padding);
+    background: #f3f0eb;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-sub {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+  }
+
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .work-card {
+    background: var(--color-bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .work-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  .work-image.placeholder {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .work-image.cafe {
+    background: linear-gradient(135deg, #a68b6b 0%, #c4a882 100%);
+  }
+
+  .work-image.salon {
+    background: linear-gradient(135deg, #b07aa1 0%, #d4a5c7 100%);
+  }
+
+  .work-image.seitai {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  }
+
+  .placeholder-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .work-image.placeholder span {
+    color: #fff;
+    font-family: var(--font-en);
+    font-weight: 600;
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+
+  .work-info {
+    padding: 1.25rem;
+  }
+
+  .work-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: rgba(91, 140, 110, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+
+  .work-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .work-info p {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    line-height: 1.7;
+  }
+
+  .work-meta {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .works-note {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .works-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+</style>

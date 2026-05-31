@@ -1,0 +1,156 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="hero-sub">ホームページ制作・Webサイト構築</p>
+    <h1>ビジネスの<br /><span class="highlight">次のステージ</span>へ</h1>
+    <p class="hero-desc">
+      店舗、フリーランス、中小企業、スタートアップ。<br />
+      あなたのビジネスに合ったWebサイトを、<br />
+      最短1週間でお届けします。
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">無料で相談する</a>
+      <a href="#plan" class="btn-secondary">料金プランを見る</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="mountain-icon">
+      <svg viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 120 L70 25 L100 60 L140 10 L200 120Z" fill="var(--color-primary)" opacity="0.15"/>
+        <path d="M20 120 L90 35 L120 65 L160 15 L200 120Z" fill="var(--color-primary)" opacity="0.25"/>
+        <path d="M140 15 L150 30 L160 20 L170 35 L140 15Z" fill="var(--color-accent)" opacity="0.6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1.5rem 4rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    flex: 1;
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight {
+    color: var(--color-primary);
+    position: relative;
+  }
+
+  .highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: var(--color-accent);
+    opacity: 0.4;
+    z-index: -1;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+    line-height: 2;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--color-primary);
+    color: #fff;
+    padding: 0.85rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 0.85rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background: var(--color-primary);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .hero-visual {
+    flex: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mountain-icon svg {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      min-height: auto;
+      padding-top: 8rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+
+    .hero-visual {
+      order: -1;
+    }
+
+    .mountain-icon svg {
+      max-width: 200px;
+    }
+  }
+</style>

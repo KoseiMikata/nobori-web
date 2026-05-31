@@ -1,0 +1,142 @@
+---
+---
+
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section-title">お問い合わせ</h2>
+    <p class="section-sub">ご相談・お見積もりは無料です。お気軽にどうぞ。</p>
+
+    <div class="contact-card">
+      <form action="#" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">お名前</label>
+          <input type="text" id="name" name="name" placeholder="山田 太郎" required />
+        </div>
+
+        <div class="form-group">
+          <label for="business">お店・事業の名前</label>
+          <input type="text" id="business" name="business" placeholder="例: カフェひだまり" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="plan">興味のあるプラン</label>
+          <select id="plan" name="plan">
+            <option value="">選択してください</option>
+            <option value="light">ライト（5万円）</option>
+            <option value="standard">スタンダード（10万円）</option>
+            <option value="premium">プレミアム（15万円）</option>
+            <option value="undecided">まだ決まっていない</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">ご相談内容</label>
+          <textarea id="message" name="message" rows="5" placeholder="どんなホームページを作りたいか、お気軽にお書きください"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">送信する</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact {
+    padding: var(--section-padding);
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-sub {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-card {
+    max-width: 560px;
+    margin: 0 auto;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 2.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-family: var(--font-ja);
+    font-size: 0.95rem;
+    background: var(--color-bg);
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-ja);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .submit-btn:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .contact-card {
+      padding: 1.5rem;
+    }
+  }
+</style>
